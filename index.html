@@ -39,8 +39,6 @@
   
 <input type="submit" name="submit">
   
-  <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LeG8xoaAAAAACNp2r5pom_NshSyRNTeqFAuAfBd"></div>
-
 </form>
   
   <script>
@@ -48,3 +46,13 @@
   </script>
   
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  
+  <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+  <button class="g-recaptcha" 
+        data-sitekey="6LeG8xoaAAAAACNp2r5pom_NshSyRNTeqFAuAfBd" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
